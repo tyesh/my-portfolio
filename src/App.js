@@ -1,19 +1,22 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <main>
-        <Container>
-          <h1>HI. I'M CARLOS</h1>
-        </Container>
-      </main>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Home />} path='/' exact />
+      </Routes>
+      <Routes>
+        <Route element={<About />} path='/about' exact />
+      </Routes>
+      <Routes>
+        <Route element={<Contact />} path='/contact' exact />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
