@@ -1,11 +1,7 @@
-main {
-    min-height: 80vh;
-}
-
 .hero-section {
     background-image: url("../public/images/pexels.jpg"); /* The image used */
     background-color: #000; /* Used if the image is unavailable */
-    height: 800px; /* You must set a specified height */
+    min-height: 100vh;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */

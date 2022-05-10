@@ -21,6 +21,11 @@ const Header = () => {
                 target="_blank"
               />
               <SocialIcon
+                url="https://www.linkedin.com/in/carlos-velazquez-94760694/"
+                className="mx-2"
+                target="_blank"
+              />
+              <SocialIcon
                 url="https://codepen.io/tyesh/"
                 className="mx-2"
                 target="_blank"
