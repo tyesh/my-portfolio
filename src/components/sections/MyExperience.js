@@ -17,10 +17,10 @@ const MyExperience = () => {
       )
       .then((data) => {
         setExperiences(data);
-        console.log(data);
       })
       .catch((error) => console.log(error));
   }, []);
+
   return (
     <Container className="my-5">
       <h2>My Experience</h2>

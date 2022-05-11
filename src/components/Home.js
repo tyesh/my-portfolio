@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import MyExperience from "./sections/MyExperience";
+import MySkills from "./sections/MySkills";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
           <h1>HI. I'M CARLOS.</h1>
         </section>
         <MyExperience />
+        <MySkills />
       </main>
       <Footer />
     </>
