@@ -18,6 +18,12 @@
     border-radius: 50%;
 }
 
+.avatar-reference{
+    vertical-align: middle;
+    width: 100px;
+    border-radius: 50%;
+}
+
 @media only screen and (min-width: 1000px) {
     .about-section {
         padding: 50px;

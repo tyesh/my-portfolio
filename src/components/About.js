@@ -5,6 +5,7 @@ import MyExperience from "./sections/MyExperience";
 import MySkills from "./sections/MySkills";
 import AboutMe from "./sections/AboutMe";
 import MyCertificates from "./sections/MyCertificates";
+import MyReferences from "./sections/MyReferences";
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
         <MyExperience />
         <MySkills />
         <MyCertificates />
+        <MyReferences />
       </main>
       <Footer />
     </>
