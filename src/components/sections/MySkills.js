@@ -36,7 +36,7 @@ const MySkills = () => {
         dui, auctor quis nunc vitae, dignissim aliquam mi. Etiam ut ultrices
         massa. Sed nisi arcu, dapibus id venenatis a, vehicula ultrices nunc. In
         eros lacus, congue id diam eget, tristique interdum leo. Fusce rutrum
-        quam vitae eros condimentum,{" "}
+        quam vitae eros condimentum,
       </p>
       <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <Col>
@@ -48,13 +48,15 @@ const MySkills = () => {
                 .map((element) => (
                   <li
                     key={element._id}
-                    className="list-group-item d-flex justify-content-between align-items-center"
+                    className="list-group-item d-flex"
                   >
-                    <img
-                      src={element.mainImage.asset.url}
-                      alt="logo"
-                      width="60px"
-                    />
+                    <div style={{ width: "90px" }}>
+                      <img
+                        src={element.mainImage.asset.url}
+                        alt="logo"
+                        width="60px"
+                      />
+                    </div>
                     {element.name}
                   </li>
                 ))}
@@ -69,13 +71,15 @@ const MySkills = () => {
                 .map((element) => (
                   <li
                     key={element._id}
-                    className="list-group-item d-flex justify-content-between align-items-center"
+                    className="list-group-item d-flex"
                   >
-                    <img
-                      src={element.mainImage.asset.url}
-                      alt="logo"
-                      width="60px"
-                    />
+                    <div style={{ width: "90px" }}>
+                      <img
+                        src={element.mainImage.asset.url}
+                        alt="logo"
+                        width="60px"
+                      />
+                    </div>
                     {element.name}
                   </li>
                 ))}
@@ -90,13 +94,15 @@ const MySkills = () => {
                 .map((element) => (
                   <li
                     key={element._id}
-                    className="list-group-item d-flex justify-content-between align-items-center"
+                    className="list-group-item d-flex"
                   >
-                    <img
-                      src={element.mainImage.asset.url}
-                      alt="logo"
-                      width="60px"
-                    />
+                    <div style={{ width: "90px" }}>
+                      <img
+                        src={element.mainImage.asset.url}
+                        alt="logo"
+                        width="60px"
+                      />
+                    </div>
                     {element.name}
                   </li>
                 ))}
@@ -111,13 +117,15 @@ const MySkills = () => {
                 .map((element) => (
                   <li
                     key={element._id}
-                    className="list-group-item d-flex justify-content-between align-items-center"
+                    className="list-group-item d-flex"
                   >
-                    <img
-                      src={element.mainImage.asset.url}
-                      alt="logo"
-                      width="60px"
-                    />
+                    <div style={{ width: "90px" }}>
+                      <img
+                        src={element.mainImage.asset.url}
+                        alt="logo"
+                        width="60px"
+                      />
+                    </div>
                     {element.name}
                   </li>
                 ))}
@@ -132,13 +140,15 @@ const MySkills = () => {
                 .map((element) => (
                   <li
                     key={element._id}
-                    className="list-group-item d-flex justify-content-between align-items-center"
+                    className="list-group-item d-flex"
                   >
-                    <img
-                      src={element.mainImage.asset.url}
-                      alt="logo"
-                      width="60px"
-                    />
+                    <div style={{ width: "90px" }}>
+                      <img
+                        src={element.mainImage.asset.url}
+                        alt="logo"
+                        width="60px"
+                      />
+                    </div>
                     {element.name}
                   </li>
                 ))}

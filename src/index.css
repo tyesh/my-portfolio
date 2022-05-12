@@ -11,3 +11,30 @@
     color: #fff;
     font-size: 60px;
 }
+
+.me-image {
+    vertical-align: middle;
+    width: 150px;
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .about-section {
+        padding: 50px;
+    }
+
+    .me-image {
+        vertical-align: middle;
+        width: 200px;
+        border-radius: 50%;
+    }
+  }
+
+
+@media only screen and (min-width: 1200px) {
+    .me-image {
+        vertical-align: middle;
+        width: 250px;
+        border-radius: 50%;
+    }
+}
