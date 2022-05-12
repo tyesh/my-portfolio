@@ -4,6 +4,7 @@ import Footer from "./layout/Footer";
 import MyExperience from "./sections/MyExperience";
 import MySkills from "./sections/MySkills";
 import AboutMe from "./sections/AboutMe";
+import MyCertificates from "./sections/MyCertificates";
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
         <AboutMe />
         <MyExperience />
         <MySkills />
+        <MyCertificates />
       </main>
       <Footer />
     </>

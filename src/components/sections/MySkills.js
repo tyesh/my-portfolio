@@ -39,7 +39,7 @@ const MySkills = () => {
         quam vitae eros condimentum,
       </p>
       <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <Col>
+        <Col className="my-3">
           <h4>Languages</h4>
           <ul className="list-group">
             {skills &&
@@ -62,7 +62,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col>
+        <Col className="my-3">
           <h4>Frameworks</h4>
           <ul className="list-group">
             {skills &&
@@ -85,7 +85,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col>
+        <Col className="my-3">
           <h4>Databases</h4>
           <ul className="list-group">
             {skills &&
@@ -108,7 +108,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col>
+        <Col className="my-3">
           <h4>API</h4>
           <ul className="list-group">
             {skills &&
@@ -131,7 +131,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col>
+        <Col className="my-3">
           <h4>Others</h4>
           <ul className="list-group">
             {skills &&
