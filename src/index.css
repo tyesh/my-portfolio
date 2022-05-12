@@ -24,6 +24,10 @@
     border-radius: 50%;
 }
 
+.contact {
+    min-height: 100vh;
+}
+
 @media only screen and (min-width: 1000px) {
     .about-section {
         padding: 50px;
