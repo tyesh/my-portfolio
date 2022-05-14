@@ -28,6 +28,15 @@
     min-height: 100vh;
 }
 
+.skill-item {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
 @media only screen and (min-width: 1000px) {
     .about-section {
         padding: 50px;
@@ -37,7 +46,7 @@
         vertical-align: middle;
         width: 200px;
         border-radius: 50%;
-    }
+    }    
   }
 
 

@@ -24,7 +24,7 @@ const MyExperience = () => {
   return (
     <Container className="my-5">
       <h2>My Experience</h2>
-      <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
         {experiences && experiences.map((experience, index) => (
           <Col key={index}>
             <div className="card border-secondary mb-3">

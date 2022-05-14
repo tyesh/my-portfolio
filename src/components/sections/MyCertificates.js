@@ -7,7 +7,7 @@ const MyCertificates = () => {
       <section>
         <Row className="row-cols-1 row-cols-sm-2">
           <Col>
-            <h4>Technical studies</h4>
+            <h2>Technical studies</h2>
             <ul className="list-group">
               <li className="list-group-item d-flex">
                 <a
@@ -68,7 +68,7 @@ const MyCertificates = () => {
             </ul>
           </Col>
           <Col>
-            <h4>Other cool stuffs</h4>
+            <h2>Other cool stuffs</h2>
             <ul className="list-group">
               <li className="list-group-item d-flex">
                 <a

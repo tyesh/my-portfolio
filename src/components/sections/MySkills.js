@@ -38,7 +38,7 @@ const MySkills = () => {
         eros lacus, congue id diam eget, tristique interdum leo. Fusce rutrum
         quam vitae eros condimentum,
       </p>
-      <Row className="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
         <Col className="my-3">
           <h4>Languages</h4>
           <ul className="list-group">
@@ -57,7 +57,7 @@ const MySkills = () => {
                         width="60px"
                       />
                     </div>
-                    {element.name}
+                    <p className="skill-item">{element.name}</p>
                   </li>
                 ))}
           </ul>
@@ -80,7 +80,7 @@ const MySkills = () => {
                         width="60px"
                       />
                     </div>
-                    {element.name}
+                    <p className="skill-item">{element.name}</p>
                   </li>
                 ))}
           </ul>
@@ -103,7 +103,7 @@ const MySkills = () => {
                         width="60px"
                       />
                     </div>
-                    {element.name}
+                    <p className="skill-item">{element.name}</p>
                   </li>
                 ))}
           </ul>
@@ -126,7 +126,7 @@ const MySkills = () => {
                         width="60px"
                       />
                     </div>
-                    {element.name}
+                    <p className="skill-item">{element.name}</p>
                   </li>
                 ))}
           </ul>
@@ -149,7 +149,7 @@ const MySkills = () => {
                         width="60px"
                       />
                     </div>
-                    {element.name}
+                    <p className="skill-item">{element.name}</p>
                   </li>
                 ))}
           </ul>
