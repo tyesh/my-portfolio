@@ -39,7 +39,7 @@ const MySkills = () => {
         quam vitae eros condimentum,
       </p>
       <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-        <Col className="my-3">
+        <Col className="my-5">
           <h4>Languages</h4>
           <ul className="list-group">
             {skills &&
@@ -50,11 +50,11 @@ const MySkills = () => {
                     key={element._id}
                     className="list-group-item d-flex"
                   >
-                    <div style={{ width: "90px" }}>
+                    <div className="skill-logo">
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        width="60px"
+                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -62,7 +62,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col className="my-3">
+        <Col className="my-5">
           <h4>Frameworks</h4>
           <ul className="list-group">
             {skills &&
@@ -73,11 +73,11 @@ const MySkills = () => {
                     key={element._id}
                     className="list-group-item d-flex"
                   >
-                    <div style={{ width: "90px" }}>
+                    <div className="skill-logo">
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        width="60px"
+                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -85,7 +85,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col className="my-3">
+        <Col className="my-5">
           <h4>Databases</h4>
           <ul className="list-group">
             {skills &&
@@ -96,11 +96,11 @@ const MySkills = () => {
                     key={element._id}
                     className="list-group-item d-flex"
                   >
-                    <div style={{ width: "90px" }}>
+                    <div className="skill-logo">
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        width="60px"
+                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -108,7 +108,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col className="my-3">
+        <Col className="my-5">
           <h4>API</h4>
           <ul className="list-group">
             {skills &&
@@ -119,11 +119,11 @@ const MySkills = () => {
                     key={element._id}
                     className="list-group-item d-flex"
                   >
-                    <div style={{ width: "90px" }}>
+                    <div className="skill-logo">
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        width="60px"
+                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -131,7 +131,7 @@ const MySkills = () => {
                 ))}
           </ul>
         </Col>
-        <Col className="my-3">
+        <Col className="my-5">
           <h4>Others</h4>
           <ul className="list-group">
             {skills &&
@@ -142,11 +142,11 @@ const MySkills = () => {
                     key={element._id}
                     className="list-group-item d-flex"
                   >
-                    <div style={{ width: "90px" }}>
+                    <div className="skill-logo">
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        width="60px"
+                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>

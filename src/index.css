@@ -28,6 +28,10 @@
     min-height: 100vh;
 }
 
+.skill-logo {
+    width: 110px;
+}
+
 .skill-item {
     text-transform: uppercase;
     letter-spacing: 3px;
