@@ -54,7 +54,6 @@ const MySkills = () => {
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -77,7 +76,6 @@ const MySkills = () => {
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -100,7 +98,6 @@ const MySkills = () => {
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -123,7 +120,6 @@ const MySkills = () => {
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>
@@ -146,7 +142,6 @@ const MySkills = () => {
                       <img
                         src={element.mainImage.asset.url}
                         alt="logo"
-                        height="60px"
                       />
                     </div>
                     <p className="skill-item">{element.name}</p>

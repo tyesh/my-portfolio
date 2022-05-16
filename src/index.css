@@ -29,7 +29,11 @@
 }
 
 .skill-logo {
-    width: 110px;
+    width: 80px;
+}
+
+.skill-logo img {
+    height: 50px;
 }
 
 .skill-item {
