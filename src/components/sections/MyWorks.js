@@ -31,11 +31,6 @@ const MyWorks = () => {
                 the bulk of the card's content.
               </p>
             </div>
-            <ul className="list-group list-group-flush">
-              <li className="list-group-item">Cras justo odio</li>
-              <li className="list-group-item">Dapibus ac facilisis in</li>
-              <li className="list-group-item">Vestibulum at eros</li>
-            </ul>
             <div className="card-body">
               <a href="www.google.com.py" className="card-link">
                 Visit
