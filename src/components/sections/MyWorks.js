@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import sanityClient from "../../client.js";
 
 const MyWorks = () => {
+  const [works, setWorks] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "work" ] | order(name asc) {
+            _id,
+            name,
+            webType,
+            charge,
+            mainImage{
+                asset->{
+                    _id,
+                    url
+                }
+            },
+            description,
+            webURL
+        }`
+      )
+      .then((data) => {
+        setWorks(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <Container className="my-5">
       <h2>My Work</h2>
@@ -14,30 +41,28 @@ const MyWorks = () => {
         eros lacus, congue id diam eget, tristique interdum leo. Fusce rutrum
         quam vitae eros condimentum,
       </p>
-      <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-        <Col>
-          <div className="card mb-3">
-            <h3 className="card-header">SocialPubli</h3>
-            <div className="card-body">
-              <h5 className="card-title">Influencer Marketing Platform</h5>
-              <h6 className="card-subtitle text-muted">
-                Backend, Frontend and mobile
-              </h6>
-            </div>
-            <img src="https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-thumb.jpg" alt="" />
-            <div className="card-body">
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div className="card-body">
-              <a href="www.google.com.py" className="card-link">
-                Visit
-              </a>
-            </div>
-          </div>
-        </Col>
+      <Row className="row-cols-1 row-cols-sm-2">
+        {works &&
+          works.map((work) => (
+            <Col key={work._id}>
+              <div className="card mb-3">
+                <h3 className="card-header">{work.name}</h3>
+                <div className="card-body">
+                  <h5 className="card-title">{work.webType}</h5>
+                  <h6 className="card-subtitle text-muted">{work.charge}</h6>
+                </div>
+                <img src={work.mainImage.asset.url} alt={work.name} />
+                <div className="card-body">
+                  <p className="card-text">{work.description}</p>
+                </div>
+                <div className="card-body">
+                  <a href={work.webURL} target="_blank" className="card-link">
+                    Visit
+                  </a>
+                </div>
+              </div>
+            </Col>
+          ))}
       </Row>
     </Container>
   );
