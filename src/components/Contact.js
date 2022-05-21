@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
 import emailjs from "@emailjs/browser";
 
 const { Control, Group, Label } = Form;
@@ -9,7 +9,13 @@ const { Control, Group, Label } = Form;
 const { REACT_APP_EMAIL_SERVICE, REACT_APP_TEMPLATE_ID, REACT_APP_EMAILJS_KEY } = process.env;
 
 const Contact = () => {
+  const [showNotification, setShowNotification] = useState(false);
+
   const form = useRef();
+
+  const closeNotification = () => {
+    setShowNotification(false);
+  };
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -28,7 +34,16 @@ const Contact = () => {
         (error) => {
           console.log(error.text);
         }
-      );
+      )
+      .finally(() => setShowNotification(true));
+  };
+
+  const EmailNotification = () => {
+    return (
+      <Alert variant="success">
+        This is a success alert—check it out!
+      </Alert>
+    );
   };
 
   return (
@@ -48,18 +63,19 @@ const Contact = () => {
               </p>
             </Col>
           </Row>
+          {showNotification && <EmailNotification />}
           <Form ref={form} onSubmit={sendEmail} autoComplete="off">
             <Group className="mb-3" controlId="from_name">
               <Label>Email address</Label>
-              <Control type="email" placeholder="example@mail.com" />
+              <Control type="email" name="from_name" placeholder="example@mail.com" />
             </Group>
             <Group className="mb-3" controlId="user_name">
               <Label>Name</Label>
-              <Control type="text" placeholder="John Doe" />
+              <Control type="text" name="user_name" placeholder="John Doe" />
             </Group>
             <Group className="mb-3" controlId="subject">
               <Label>Subject</Label>
-              <Control type="text" placeholder="Subject" />
+              <Control type="text" name="subject" placeholder="Subject" />
             </Group>
             <Group className="mb-3" controlId="message">
               <Label>Message</Label>
@@ -67,6 +83,7 @@ const Contact = () => {
                 as="textarea"
                 placeholder="Leave a message here"
                 style={{ height: "200px" }}
+                name="message"
               />
             </Group>
             <Button variant="primary" type="submit">
