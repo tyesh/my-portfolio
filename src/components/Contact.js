@@ -6,7 +6,11 @@ import emailjs from "@emailjs/browser";
 
 const { Control, Group, Label } = Form;
 
-const { REACT_APP_EMAIL_SERVICE, REACT_APP_TEMPLATE_ID, REACT_APP_EMAILJS_KEY } = process.env;
+const {
+  REACT_APP_EMAIL_SERVICE,
+  REACT_APP_TEMPLATE_ID,
+  REACT_APP_EMAILJS_KEY,
+} = process.env;
 
 const Contact = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -19,13 +23,13 @@ const Contact = () => {
 
   const sendEmail = (event) => {
     event.preventDefault();
-    
+
     emailjs
       .sendForm(
         `${REACT_APP_EMAIL_SERVICE}`,
         `${REACT_APP_TEMPLATE_ID}`,
         form.current,
-        `${REACT_APP_EMAILJS_KEY}`,
+        `${REACT_APP_EMAILJS_KEY}`
       )
       .then(
         (result) => {
@@ -35,13 +39,21 @@ const Contact = () => {
           console.log(error.text);
         }
       )
-      .finally(() => setShowNotification(true));
+      .finally(() => {
+        form.current.reset();
+        setShowNotification(true);
+      });
   };
 
   const EmailNotification = () => {
     return (
-      <Alert variant="success">
-        This is a success alert—check it out!
+      <Alert variant="success" onClose={() => closeNotification()} dismissible>
+        <Alert.Heading>Email sended!</Alert.Heading>
+        <p>
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
+          fermentum.
+        </p>
       </Alert>
     );
   };
@@ -67,7 +79,11 @@ const Contact = () => {
           <Form ref={form} onSubmit={sendEmail} autoComplete="off">
             <Group className="mb-3" controlId="from_name">
               <Label>Email address</Label>
-              <Control type="email" name="from_name" placeholder="example@mail.com" />
+              <Control
+                type="email"
+                name="from_name"
+                placeholder="example@mail.com"
+              />
             </Group>
             <Group className="mb-3" controlId="user_name">
               <Label>Name</Label>
