@@ -28,7 +28,7 @@ const MySkills = () => {
 
   return (
     <Container className="my-5">
-      <h2>My Skills</h2>
+      <h2>Skills</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est
         augue. Quisque dui ante, pretium non venenatis nec, aliquam suscipit
@@ -38,117 +38,18 @@ const MySkills = () => {
         eros lacus, congue id diam eget, tristique interdum leo. Fusce rutrum
         quam vitae eros condimentum,
       </p>
-      <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
-        <Col className="my-5">
-          <h4>Languages</h4>
-          <ul className="list-group">
-            {skills &&
-              skills
-                .filter((skill) => skill.category.name === "Language")
-                .map((element) => (
-                  <li
-                    key={element._id}
-                    className="list-group-item d-flex"
-                  >
-                    <div className="skill-logo">
-                      <img
-                        src={element.mainImage.asset.url}
-                        alt="logo"
-                      />
-                    </div>
-                    <p className="skill-item">{element.name}</p>
-                  </li>
-                ))}
-          </ul>
-        </Col>
-        <Col className="my-5">
-          <h4>Frameworks</h4>
-          <ul className="list-group">
-            {skills &&
-              skills
-                .filter((skill) => skill.category.name === "Frameworks")
-                .map((element) => (
-                  <li
-                    key={element._id}
-                    className="list-group-item d-flex"
-                  >
-                    <div className="skill-logo">
-                      <img
-                        src={element.mainImage.asset.url}
-                        alt="logo"
-                      />
-                    </div>
-                    <p className="skill-item">{element.name}</p>
-                  </li>
-                ))}
-          </ul>
-        </Col>
-        <Col className="my-5">
-          <h4>Databases</h4>
-          <ul className="list-group">
-            {skills &&
-              skills
-                .filter((skill) => skill.category.name === "Database")
-                .map((element) => (
-                  <li
-                    key={element._id}
-                    className="list-group-item d-flex"
-                  >
-                    <div className="skill-logo">
-                      <img
-                        src={element.mainImage.asset.url}
-                        alt="logo"
-                      />
-                    </div>
-                    <p className="skill-item">{element.name}</p>
-                  </li>
-                ))}
-          </ul>
-        </Col>
-        <Col className="my-5">
-          <h4>API</h4>
-          <ul className="list-group">
-            {skills &&
-              skills
-                .filter((skill) => skill.category.name === "API")
-                .map((element) => (
-                  <li
-                    key={element._id}
-                    className="list-group-item d-flex"
-                  >
-                    <div className="skill-logo">
-                      <img
-                        src={element.mainImage.asset.url}
-                        alt="logo"
-                      />
-                    </div>
-                    <p className="skill-item">{element.name}</p>
-                  </li>
-                ))}
-          </ul>
-        </Col>
-        <Col className="my-5">
-          <h4>Others</h4>
-          <ul className="list-group">
-            {skills &&
-              skills
-                .filter((skill) => skill.category.name === "Others")
-                .map((element) => (
-                  <li
-                    key={element._id}
-                    className="list-group-item d-flex"
-                  >
-                    <div className="skill-logo">
-                      <img
-                        src={element.mainImage.asset.url}
-                        alt="logo"
-                      />
-                    </div>
-                    <p className="skill-item">{element.name}</p>
-                  </li>
-                ))}
-          </ul>
-        </Col>
+      <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6 g-6">
+        {skills &&
+          skills.map((skill) => (
+            <li key={skill._id} className="d-flex flex-column justify-content-center align-items-center">
+              <Col className="mt-5 text-center">
+                <div className="d-flex flex-row skill-item justify-content-center align-items-center">
+                  <img src={skill.mainImage.asset.url} alt="logo" />
+                </div>
+                <p className="mt-1">{skill.name}</p>
+              </Col>
+            </li>
+          ))}
       </Row>
     </Container>
   );
