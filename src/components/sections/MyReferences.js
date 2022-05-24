@@ -47,7 +47,7 @@ const MyReferences = () => {
                     className="avatar-reference"
                   />
                 </Col>
-                <Col xs="8">
+                <Col xs="8" className="px-4">
                   <h4 className="card-title">{reference.name}</h4>
                   <p className="card-text">{reference.email}</p>
                 </Col>

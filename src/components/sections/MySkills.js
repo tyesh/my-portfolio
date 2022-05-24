@@ -4,6 +4,7 @@ import sanityClient from "../../client.js";
 
 const MySkills = () => {
   const [skills, setSkills] = useState(null);
+  const [animateSkill, setaAnimateSkill] = useState({ y: 0, opacity: 1});
 
   useEffect(() => {
     sanityClient

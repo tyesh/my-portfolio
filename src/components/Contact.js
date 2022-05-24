@@ -63,49 +63,54 @@ const Contact = () => {
       <Header />
       <main className="contact">
         <Container>
-          <Row>
-            <Col>
-              <h1>Contact</h1>
-              <p>
-                Feel free to send a email to{" "}
-                <a href="mailto: cvelazquez_91@hotmail.com">
-                  cvelazquez_91@hotmail.com
-                </a>{" "}
-                or add me to you Linkedin network to say hello.
-              </p>
+          <h1>Contact</h1>
+          {showNotification && <EmailNotification />}
+          <Row className="my-3">
+          <Col xs="12" md={{ span: 8, order: 2 }} >
+              <Form ref={form} onSubmit={sendEmail} autoComplete="off" className="px-4 pb-5">
+                <Group className="mb-3" controlId="from_name">
+                  <Label>Email address</Label>
+                  <Control
+                    type="email"
+                    name="from_name"
+                    placeholder="example@mail.com"
+                  />
+                </Group>
+                <Group className="mb-3" controlId="user_name">
+                  <Label>Name</Label>
+                  <Control
+                    type="text"
+                    name="user_name"
+                    placeholder="John Doe"
+                  />
+                </Group>
+                <Group className="mb-3" controlId="subject">
+                  <Label>Subject</Label>
+                  <Control type="text" name="subject" placeholder="Subject" />
+                </Group>
+                <Group className="mb-3" controlId="message">
+                  <Label>Message</Label>
+                  <Control
+                    as="textarea"
+                    placeholder="Leave a message here"
+                    style={{ height: "200px" }}
+                    name="message"
+                  />
+                </Group>
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </Form>
+            </Col>
+            <Col xs="12" md={{ span: 4, order: 1 }} style={{ backgroundColor: "#4bbf73" }}>
+              <div className="m-4" style={{color: "#fff"}}>
+                <h2 className="h4" style={{color: "#fff"}}>Let's get in touch</h2>
+                <p>
+                  Feel free to send a email or add me to you Linkedin network to say hello.
+                </p>
+              </div>
             </Col>
           </Row>
-          {showNotification && <EmailNotification />}
-          <Form ref={form} onSubmit={sendEmail} autoComplete="off">
-            <Group className="mb-3" controlId="from_name">
-              <Label>Email address</Label>
-              <Control
-                type="email"
-                name="from_name"
-                placeholder="example@mail.com"
-              />
-            </Group>
-            <Group className="mb-3" controlId="user_name">
-              <Label>Name</Label>
-              <Control type="text" name="user_name" placeholder="John Doe" />
-            </Group>
-            <Group className="mb-3" controlId="subject">
-              <Label>Subject</Label>
-              <Control type="text" name="subject" placeholder="Subject" />
-            </Group>
-            <Group className="mb-3" controlId="message">
-              <Label>Message</Label>
-              <Control
-                as="textarea"
-                placeholder="Leave a message here"
-                style={{ height: "200px" }}
-                name="message"
-              />
-            </Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
         </Container>
       </main>
       <Footer />
