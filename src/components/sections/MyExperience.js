@@ -23,7 +23,7 @@ const MyExperience = () => {
 
   return (
     <Container className="my-5">
-      <h2>My Experience</h2>
+      <h2>Experience</h2>
       <Row className="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
         {experiences && experiences.map((experience, index) => (
           <Col key={index}>
