@@ -1,91 +1,61 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import sanityClient from "../../client.js";
+
 
 const MyReferences = () => {
+  const [references, setReferences] = useState([]);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "references" && show == true ] | order(name asc) {
+            _id,
+            name,
+            charge,
+            location,
+            email,
+            avatar{
+                asset->{
+                    _id,
+                    url
+                }
+            },
+            category->{name}
+        }`
+      )
+      .then((data) => {
+        setReferences(data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <Container className="my-5">
       <h2>References</h2>
       <Row className="row-cols-1 row-cols-sm-2">
-        <Col>
+        {references && references.map((reference) => (
+          <Col key={reference._id}>
           <div className="card border-secondary mb-3">
-            <div className="card-header">Senior Developer</div>
+            <div className="card-header">{`${reference.charge} - ${reference.location}`}</div>
             <div className="card-body d-flex">
               <Row>
                 <Col xs="4">
                   <img
-                    src="https://avatars.githubusercontent.com/u/18407712?s=400&u=4aaf8572a2810a8ee1e0eea7a489bdd260dc5e35&v=4"
+                    src={reference.avatar.asset.url}
                     alt="logo"
                     className="avatar-reference"
                   />
                 </Col>
                 <Col xs="8">
-                  <h4 className="card-title">John Doe</h4>
-                  <p className="card-text">Email: example@mail.com</p>
+                  <h4 className="card-title">{reference.name}</h4>
+                  <p className="card-text">{reference.email}</p>
                 </Col>
               </Row>
             </div>
           </div>
         </Col>
-        <Col>
-          <div className="card border-secondary mb-3">
-            <div className="card-header">Senior Developer</div>
-            <div className="card-body d-flex">
-              <Row>
-                <Col xs="4">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/18407712?s=400&u=4aaf8572a2810a8ee1e0eea7a489bdd260dc5e35&v=4"
-                    alt="logo"
-                    className="avatar-reference"
-                  />
-                </Col>
-                <Col xs="8">
-                  <h4 className="card-title">John Doe</h4>
-                  <p className="card-text">Email: example@mail.com</p>
-                </Col>
-              </Row>
-            </div>
-          </div>
-        </Col>
-        <Col>
-          <div className="card border-secondary mb-3">
-            <div className="card-header">Senior Developer</div>
-            <div className="card-body d-flex">
-              <Row>
-                <Col xs="4">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/18407712?s=400&u=4aaf8572a2810a8ee1e0eea7a489bdd260dc5e35&v=4"
-                    alt="logo"
-                    className="avatar-reference"
-                  />
-                </Col>
-                <Col xs="8">
-                  <h4 className="card-title">John Doe</h4>
-                  <p className="card-text">Email: example@mail.com</p>
-                </Col>
-              </Row>
-            </div>
-          </div>
-        </Col>
-        <Col>
-          <div className="card border-secondary mb-3">
-            <div className="card-header">Senior Developer</div>
-            <div className="card-body d-flex">
-              <Row>
-                <Col xs="4">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/18407712?s=400&u=4aaf8572a2810a8ee1e0eea7a489bdd260dc5e35&v=4"
-                    alt="logo"
-                    className="avatar-reference"
-                  />
-                </Col>
-                <Col xs="8">
-                  <h4 className="card-title">John Doe</h4>
-                  <p className="card-text">Email: example@mail.com</p>
-                </Col>
-              </Row>
-            </div>
-          </div>
-        </Col>
+        ))}
       </Row>
     </Container>
   );
