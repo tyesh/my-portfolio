@@ -42,7 +42,7 @@ const MySkills = () => {
         {skills &&
           skills.map((skill) => (
             <li key={skill._id} className="d-flex flex-column justify-content-center align-items-center">
-              <Col className="mt-5 text-center">
+              <Col className="mt-5 text-center justify-content-center align-items-center">
                 <div className="d-flex flex-row skill-item justify-content-center align-items-center">
                   <img src={skill.mainImage.asset.url} alt="logo" />
                 </div>

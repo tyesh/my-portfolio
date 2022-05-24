@@ -41,29 +41,28 @@ const MyWorks = () => {
         eros lacus, congue id diam eget, tristique interdum leo. Fusce rutrum
         quam vitae eros condimentum,
       </p>
-      <Row className="row-cols-1 row-cols-sm-2">
-        {works &&
-          works.map((work) => (
-            <Col key={work._id}>
-              <div className="card mb-3">
-                <h3 className="card-header">{work.name}</h3>
-                <div className="card-body">
-                  <h5 className="card-title">{work.webType}</h5>
-                  <h6 className="card-subtitle text-muted">{work.charge}</h6>
-                </div>
-                <img src={work.mainImage.asset.url} alt={work.name} />
-                <div className="card-body">
-                  <p className="card-text">{work.description}</p>
-                </div>
-                <div className="card-body">
-                  <a href={work.webURL} target="_blank" className="card-link">
-                    Visit
-                  </a>
-                </div>
-              </div>
-            </Col>
-          ))}
-      </Row>
+      {works &&
+        works.map((work, index) => (
+          <div key={work._id}>
+            <hr className="featurette-divider" />
+            <Row className="row featurette">
+              <Col md={index % 2 ? { span: 7, order: 2 } : { span: 7 }}>
+                <h3>{work.name}</h3>
+                <h4 className="text-muted">{work.webType}</h4>
+                <p>{work.description}</p>
+              </Col>
+              <Col md={index % 2 ? { span: 5, order: 1 } : { span: 5 }}>
+                <img
+                  className="img-fluid mx-auto"
+                  src={work.mainImage.asset.url}
+                  alt={work.name}
+                  width="500"
+                  height="500"
+                />
+              </Col>
+            </Row>
+          </div>
+        ))}
     </Container>
   );
 };
