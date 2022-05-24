@@ -12,6 +12,8 @@ import studies from './studies'
 import studies_category from './studies_category'
 import references from './references'
 import work from './work'
+import certificate from './certificate'
+import certificateCategory from './certificate_category'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +31,7 @@ export default createSchema({
     studies_category,
     references,
     work,
+    certificate,
+    certificateCategory
   ]),
 })
