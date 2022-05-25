@@ -38,10 +38,11 @@ const MyReferences = () => {
           <Row className="row-cols-1 row-cols-sm-2">
             {references.map((reference) => (
               <motion.div
+                key={reference._id}
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
               >
-                <Col key={reference._id}>
+                <Col>
                   <div className="card border-secondary mb-3">
                     <div className="card-header">{`${reference.charge} - ${reference.location}`}</div>
                     <div className="card-body d-flex">
