@@ -27,23 +27,6 @@
 .contact {
   min-height: 100vh;
 }
-/*
-.skill-logo {
-    width: 80px;
-}
-
-.skill-logo img {
-    height: 50px;
-}
-
-.skill-item {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 1.15rem;
-    margin-top: 0;
-    margin-bottom: .5rem;
-    font-weight: 600;
-}*/
 
 .skill-item {
   width: 90px;

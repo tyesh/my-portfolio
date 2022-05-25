@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import sanityClient from "../../client.js";
+import { motion } from "framer-motion";
 
 const MyWorks = () => {
   const [works, setWorks] = useState(null);
@@ -43,7 +44,11 @@ const MyWorks = () => {
       </p>
       {works &&
         works.map((work, index) => (
-          <div key={work._id}>
+          <motion.div
+            key={work._id}
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 0.5 }}
+          >
             <hr className="featurette-divider" />
             <Row className="row featurette">
               <Col md={index % 2 ? { span: 7, order: 2 } : { span: 7 }}>
@@ -61,7 +66,7 @@ const MyWorks = () => {
                 />
               </Col>
             </Row>
-          </div>
+          </motion.div>
         ))}
     </Container>
   );

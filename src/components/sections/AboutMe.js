@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const AboutMe = () => {
   return (
-    <Container>
+    <Container style={{ minHeight: "70vh" }}>
       <section className="about-section">
         <Row>
           <Col
