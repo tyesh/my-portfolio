@@ -42,22 +42,18 @@ const MySkills = () => {
       <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6 g-6">
         {skills &&
           skills.map((skill) => (
-            <li
-              key={skill._id}
-              className="d-flex flex-column justify-content-center align-items-center"
-            >
+            <Col key={skill._id}>
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 0.5 }}
+                className="mt-3 d-flex flex-column text-center justify-content-center align-items-center"
               >
-                <Col className="mt-5 text-center justify-content-center align-items-center">
-                  <div className="d-flex flex-row skill-item justify-content-center align-items-center">
-                    <img src={skill.mainImage.asset.url} alt="logo" />
-                  </div>
-                  <p className="mt-1">{skill.name}</p>
-                </Col>
+                <div className="d-flex flex-row skill-item justify-content-center align-items-center">
+                  <img src={skill.mainImage.asset.url} alt="logo" />
+                </div>
+                <p className="mt-1">{skill.name}</p>
               </motion.div>
-            </li>
+            </Col>
           ))}
       </Row>
     </Container>

@@ -59,6 +59,24 @@
   letter-spacing: -0.05rem;
 }
 
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 0.8;
+  transition: opacity 0.3 ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3 ease-out;
+}
+
 @media only screen and (min-width: 1000px) {
   .about-section {
     padding: 50px;
