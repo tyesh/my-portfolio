@@ -66,18 +66,21 @@ const MyCertificates = () => {
                         "other cool stuffs"
                     )
                     .map((certificate) => (
-                      <li
-                        className="list-group-item d-flex"
+                      <motion.div
                         key={certificate._id}
+                        whileInView={{ opacity: [0, 1] }}
+                        transition={{ duration: 0.5 }}
                       >
-                        <a
-                          href={certificate.url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {certificate.name}
-                        </a>
-                      </li>
+                        <li className="list-group-item d-flex">
+                          <a
+                            href={certificate.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {certificate.name}
+                          </a>
+                        </li>
+                      </motion.div>
                     ))}
               </ul>
             </Col>
