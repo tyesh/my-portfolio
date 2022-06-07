@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import sanityClient from "../../client.js";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import sanityClient from '../../client.js';
 
 const MyWorks = () => {
   const [works, setWorks] = useState(null);
@@ -31,7 +30,7 @@ const MyWorks = () => {
   }, []);
 
   return (
-    <Container className="my-5">
+    <Container className='my-5'>
       <h2>My Work</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est
@@ -44,29 +43,25 @@ const MyWorks = () => {
       </p>
       {works &&
         works.map((work, index) => (
-          <motion.div
-            key={work._id}
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-          >
-            <hr className="featurette-divider" />
-            <Row className="row featurette">
+          <div key={work._id}>
+            <hr className='featurette-divider' />
+            <Row className='row featurette'>
               <Col md={index % 2 ? { span: 7, order: 2 } : { span: 7 }}>
                 <h3>{work.name}</h3>
-                <h4 className="text-muted">{work.webType}</h4>
+                <h4 className='text-muted'>{work.webType}</h4>
                 <p>{work.description}</p>
               </Col>
               <Col md={index % 2 ? { span: 5, order: 1 } : { span: 5 }}>
                 <img
-                  className="img-fluid mx-auto"
+                  className='img-fluid mx-auto'
                   src={work.mainImage.asset.url}
                   alt={work.name}
-                  width="500"
-                  height="500"
+                  width='500'
+                  height='500'
                 />
               </Col>
             </Row>
-          </motion.div>
+          </div>
         ))}
     </Container>
   );

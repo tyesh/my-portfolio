@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import sanityClient from "../../client.js";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import sanityClient from '../../client.js';
 
 const MySkills = () => {
   const [skills, setSkills] = useState(null);
@@ -28,31 +27,27 @@ const MySkills = () => {
   }, []);
 
   return (
-    <Container className="my-5">
+    <Container className='my-5'>
       <h2>Skills</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est
-        augue. Quisque dui ante, pretium non venenatis nec, aliquam suscipit
-        lectus. Mauris ut cursus eros. Vestibulum nec eleifend leo. Vivamus eros
-        dui, auctor quis nunc vitae, dignissim aliquam mi. Etiam ut ultrices
-        massa. Sed nisi arcu, dapibus id venenatis a, vehicula ultrices nunc. In
-        eros lacus, congue id diam eget, tristique interdum leo. Fusce rutrum
-        quam vitae eros condimentum,
+        Through the develop of projects for diferents clients, i had the
+        oportunity to learn and work with many languages and frameworks. Today
+        my main focus are web relates technologies, like JS, REST services and
+        Java Spring. Also i'm interested in mobile and desktop applications that
+        use JS frameworks like Ionic and Electron. Here it's a list of tools i'm
+        most familiar with.
       </p>
-      <Row className="row-cols-2 row-cols-sm-3 row-cols-lg-6 g-6">
+      <Row className='row-cols-2 row-cols-sm-3 row-cols-lg-6 g-6'>
         {skills &&
           skills.map((skill) => (
-            <Col key={skill._id}>
-              <motion.div
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 0.5 }}
-                className="mt-3 d-flex flex-column text-center justify-content-center align-items-center"
-              >
-                <div className="d-flex flex-row skill-item justify-content-center align-items-center">
-                  <img src={skill.mainImage.asset.url} alt="logo" />
-                </div>
-                <p className="mt-1">{skill.name}</p>
-              </motion.div>
+            <Col
+              key={skill._id}
+              className='mt-3 d-flex flex-column text-center justify-content-center align-items-center'
+            >
+              <div className='d-flex flex-row skill-item justify-content-center align-items-center'>
+                <img src={skill.mainImage.asset.url} alt='logo' />
+              </div>
+              <p className='mt-1'>{skill.name}</p>
             </Col>
           ))}
       </Row>
