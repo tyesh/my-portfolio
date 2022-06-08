@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import sanityClient from "../../client.js";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import sanityClient from '../../client.js';
 
 const MyCertificates = () => {
   const [certificates, setCertificates] = useState();
@@ -26,61 +25,53 @@ const MyCertificates = () => {
     <Container>
       {certificates && (
         <section>
-          <Row className="row-cols-1 row-cols-sm-2">
+          <Row className='row-cols-1 row-cols-sm-2'>
             <Col>
               <h2>Technical studies</h2>
-              <ul className="list-group">
+              <ul className='list-group'>
                 {certificates
                   .filter(
                     (certificate) =>
                       certificate.category.name.toLowerCase() ===
-                      "technical studies"
+                      'technical studies'
                   )
                   .map((certificate) => (
-                    <motion.div
-                      key={certificate._id}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <li className="list-group-item d-flex">
+                    <div key={certificate._id}>
+                      <li className='list-group-item d-flex'>
                         <a
                           href={certificate.url}
-                          target="_blank"
-                          rel="noreferrer"
+                          target='_blank'
+                          rel='noreferrer'
                         >
                           {certificate.name}
                         </a>
                       </li>
-                    </motion.div>
+                    </div>
                   ))}
               </ul>
             </Col>
             <Col>
               <h2>Other cool stuffs</h2>
-              <ul className="list-group">
+              <ul className='list-group'>
                 {certificates &&
                   certificates
                     .filter(
                       (certificate) =>
                         certificate.category.name.toLowerCase() ===
-                        "other cool stuffs"
+                        'other cool stuffs'
                     )
                     .map((certificate) => (
-                      <motion.div
-                        key={certificate._id}
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ duration: 0.5 }}
-                      >
-                        <li className="list-group-item d-flex">
+                      <div key={certificate._id}>
+                        <li className='list-group-item d-flex'>
                           <a
                             href={certificate.url}
-                            target="_blank"
-                            rel="noreferrer"
+                            target='_blank'
+                            rel='noreferrer'
                           >
                             {certificate.name}
                           </a>
                         </li>
-                      </motion.div>
+                      </div>
                     ))}
               </ul>
             </Col>
