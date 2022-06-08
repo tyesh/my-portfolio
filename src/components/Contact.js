@@ -69,7 +69,7 @@ const Contact = () => {
       <Header />
       <main className='contact'>
         <Container>
-          <h1>Contact</h1>
+          <h1>Let's get in touch</h1>
           {showNotification && <EmailNotification />}
           <Row className='my-3'>
             <Col xs='12' md={{ span: 8, order: 2 }}>
@@ -115,7 +115,6 @@ const Contact = () => {
             </Col>
             <Col xs='12' md={{ span: 4, order: 1 }}>
               <div className='m-4'>
-                <h2 className='h4'>Let's get in touch</h2>
                 <p>
                   Feel free to send a email or add me to you Linkedin network
                   and say hello!
