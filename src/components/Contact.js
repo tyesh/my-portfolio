@@ -126,6 +126,7 @@ const Contact = () => {
                       href='https://www.vecteezy.com/free-vector/cartoon'
                       style={{ fontSize: '12px' }}
                       target='_blank'
+                      rel='noreferrer'
                     >
                       Cartoon Vectors by Vecteezy
                     </a>
