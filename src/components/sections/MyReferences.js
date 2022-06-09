@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import sanityClient from '../../client.js';
 
 const MyReferences = () => {
-  const [references, setReferences] = useState();
+  const [references, setReferences] = useState([]);
 
   useEffect(() => {
     sanityClient
@@ -31,7 +31,7 @@ const MyReferences = () => {
 
   return (
     <Container className='my-5'>
-      {references && (
+      {references.length > 0 && (
         <section>
           <h2>References</h2>
           <Row className='row-cols-1 row-cols-sm-2'>
