@@ -8,7 +8,7 @@ const MyWorks = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "work" ] | order(name asc) {
+        `*[_type == "work" ] | order(_id asc) {
             _id,
             name,
             webType,
