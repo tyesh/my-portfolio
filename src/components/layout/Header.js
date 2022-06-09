@@ -19,16 +19,19 @@ const Header = () => {
                 url="https://github.com/tyesh"
                 className="mx-2"
                 target="_blank"
+                rel='noreferrer'
               />
               <SocialIcon
                 url="https://www.linkedin.com/in/carlos-velazquez-94760694/"
                 className="mx-2"
                 target="_blank"
+                rel='noreferrer'
               />
               <SocialIcon
                 url="https://codepen.io/tyesh/"
                 className="mx-2"
                 target="_blank"
+                rel='noreferrer'
               />
             </Nav>
           </Navbar.Collapse>
