@@ -20,7 +20,9 @@ const MyWorks = () => {
                 }
             },
             description,
-            webURL
+            webURL,
+            playStoreURL,
+            iosStore
         }`
       )
       .then((data) => {
@@ -45,6 +47,32 @@ const MyWorks = () => {
                 <h3>{work.name}</h3>
                 <h4 className='text-muted'>{work.webType}</h4>
                 <p>{work.description}</p>
+                <a
+                  className='btn btn-primary my-3'
+                  href={work.webURL}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Visit WebPage
+                </a>
+                {work.playStoreURL && (
+                  <p>
+                    <a
+                      href={work.playStoreURL}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      Visit Google Play Store
+                    </a>
+                  </p>
+                )}
+                {work.iosStore && (
+                  <p>
+                    <a href={work.iosStore} target='_blank' rel='noreferrer'>
+                      Visit Apple Store
+                    </a>
+                  </p>
+                )}
               </Col>
               <Col md={index % 2 ? { span: 5, order: 1 } : { span: 5 }}>
                 <img
