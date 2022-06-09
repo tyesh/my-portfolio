@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 const AboutMe = () => {
   return (
-    <Container style={{ minHeight: '70vh' }}>
+    <Container>
       <section className='about-section'>
         <Row>
           <Col
@@ -19,14 +19,23 @@ const AboutMe = () => {
             />
           </Col>
           <Col xs='12' sm='9' md='9' className='my-5'>
-            <h2>My Profile</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in est
-            augue. Quisque dui ante, pretium non venenatis nec, aliquam suscipit
-            lectus. Mauris ut cursus eros. Vestibulum nec eleifend leo. Vivamus
-            eros dui, auctor quis nunc vitae, dignissim aliquam mi. Etiam ut
-            ultrices massa. Sed nisi arcu, dapibus id venenatis a, vehicula
-            ultrices nunc. In eros lacus, congue id diam eget, tristique
-            interdum leo. Fusce rutrum quam vitae eros condimentum,
+            <h2>Hi there, nice to meet you.</h2>
+            <p>
+              I'm a developer from Paraguay with experience in web relates
+              technologies.
+            </p>
+            <p>
+              For many years i have worked in the services sector, offering
+              solutions to the products of the clients. Thus, i had to adapt to
+              differents frameworks, architectures, models and culture of work.
+              This turned out very good for me. The diferences showed to me that
+              it's better to know the concepts rather that memorizing, the valor
+              of feedbacks and to try new things.
+            </p>
+            <p>
+              I draw my inspiration from the endless capacity of technology to
+              provide creative solutions, to connect people and to improve life.
+            </p>
           </Col>
         </Row>
       </section>

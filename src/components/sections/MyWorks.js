@@ -33,16 +33,8 @@ const MyWorks = () => {
     <Container className='my-5'>
       <h2>My Work</h2>
       <p>
-        For many years i have worked in the services sector, offering solutions
-        to the products of the clients. Thus, i had to adapt to differents
-        frameworks, architectures, models and culture of work. This turned out
-        very good for me. The diferences showed to me that it's better to know
-        the concepts rather that memorizing, the valor of feedbacks, the
-        constant growth, to look forward and see the bigger picture.
-      </p>
-      <p>
-        Here it's a list some of the projects of witch i have contributed with
-        some code and a brief description of the tasks.
+        Here it's a list some the projects that i have contributed and a brief
+        description of my participation.
       </p>
       {works &&
         works.map((work, index) => (
