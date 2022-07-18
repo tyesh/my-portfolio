@@ -35,8 +35,8 @@ const MyWorks = () => {
     <Container className='my-5'>
       <h2>My Work</h2>
       <p>
-        Here it's a list some the projects that i have contributed and a brief
-        description of my participation.
+        Here it's a list of some the projects that I have contributed, and a
+        brief description of my participation.
       </p>
       {works &&
         works.map((work, index) => (
