@@ -25,8 +25,8 @@ const AboutMe = () => {
               technologies.
             </p>
             <p>
-              For many years i have worked in the services sector, offering
-              solutions to the products of the clients. Thus, i had to adapt to
+              For many years I have worked in the services sector, offering
+              solutions to the products of the clients. Thus, I had to adapt to
               differents frameworks, architectures, models and culture of work.
               This turned out very good for me. The diferences showed to me that
               it's better to know the concepts rather that memorizing, the valor

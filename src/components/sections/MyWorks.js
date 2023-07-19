@@ -47,14 +47,16 @@ const MyWorks = () => {
                 <h3>{work.name}</h3>
                 <h4 className='text-muted'>{work.webType}</h4>
                 <p>{work.description}</p>
-                <a
-                  className='btn btn-primary my-3'
-                  href={work.webURL}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Visit WebPage
-                </a>
+                {
+                  work.webURL && <a
+                    className='btn btn-primary my-3'
+                    href={work.webURL}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Visit WebPage
+                  </a>
+                }
                 {work.playStoreURL && (
                   <p>
                     <a

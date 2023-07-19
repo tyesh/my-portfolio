@@ -30,11 +30,11 @@ const MySkills = () => {
     <Container className='my-5'>
       <h2>Skills</h2>
       <p>
-        Through the develop of projects for diferents clients, i had the
+        Through the develop of projects for diferents clients, I had the
         oportunity to learn and work with many languages and frameworks. Today
         my main focus are web relates technologies, like JS, REST services and
-        Java Spring. Also i'm interested in mobile and desktop applications that
-        use JS frameworks like Ionic and Electron. Here it's a list of tools i'm
+        Java Spring. Also I'm interested in mobile and desktop applications that
+        use JS frameworks like Ionic and Electron. Here it's a list of tools I'm
         most familiar with.
       </p>
       <Row className='row-cols-2 row-cols-sm-3 row-cols-lg-6 g-6'>
